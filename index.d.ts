@@ -1,4 +1,8 @@
-declare class AndroidApkInstaller {
-    static install(): Promise<string>;
+declare module 'react-native-android-apk-installer' {
+
+    const AndroidApkInstaller: {
+        install: () => Promise<string>;
+    };
+
+    export = AndroidApkInstaller;
 }
-export default AndroidApkInstaller;
