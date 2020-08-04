@@ -1,7 +1,7 @@
 {
   "name": "react-native-android-apk-installer",
   "title": "React Native Android Apk Installer",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "React Native Android APK Installer with success/error handler",
   "main": "index.js",
   "files": [

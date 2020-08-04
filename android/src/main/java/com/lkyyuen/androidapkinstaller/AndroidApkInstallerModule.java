@@ -36,9 +36,11 @@ public class AndroidApkInstallerModule extends ReactContextBaseJavaModule {
                     // Log.d("SUPER-PORTAL-APP", String.valueOf(resultCode));
                     // Log.d("SUPER-PORTAL-APP", String.valueOf(Activity.RESULT_CANCELED));
                     if (resultCode == Activity.RESULT_CANCELED) {
-                        mPickerPromise.reject(E_INSTALL_CANCELLED, "package installer was cancelled");
+                        mPickerPromise.reject("400");
+                    } else if (resultCode == Activity.RESULT_OK) {
+                        mPickerPromise.resolve("200");
                     } else {
-                        mPickerPromise.resolve(resultCode + " package install success");
+                        mPickerPromise.reject("400");
                     }
 
                     mPickerPromise = null;
